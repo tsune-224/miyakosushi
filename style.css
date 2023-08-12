@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap");
+body {
+  background-image: url("img/japanese-paper_00372.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Shippori Mincho", serif;
+  margin: 0px;
+  position: relative;
+}
+
+body.on_load {
+  overflow: hidden;
+}
+
+body.sp-nav-active {
+  overflow: hidden;
+}
+
+body h1 {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 800;
+  margin: 0px;
+  height: 90px;
+}
+
+body h1 img {
+  width: 150px;
+  height: 100%;
+}
+
+body header {
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  background-color: rgba(92, 135, 24, 0.52);
+  box-shadow: 0px 0px 10px #000;
+  z-index: 1;
+  transition: all 0.5s;
+  opacity: 1;
+}
+
+body header.hide {
+  opacity: 0;
+  transform: translateY(-110px);
+}
+
+body header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+body header .container .pc-nav {
+  width: 50%;
+}
+
+@media screen and (max-width: 992px) {
+  body header .container .pc-nav {
+    display: none;
+  }
+}
+
+body header .container .pc-nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0px;
+}
+
+body header .container .pc-nav ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+body header .container .sp-nav {
+  width: auto;
+  height: 100%;
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  body header .container .sp-nav {
+    display: block;
+  }
+}
+
+body header .container .sp-nav .humberger-btn {
+  display: block;
+  width: 60px;
+  height: 70px;
+  position: relative;
+  z-index: 11;
+  border: none;
+  cursor: pointer;
+}
+
+body header .container .sp-nav .humberger-btn.close .bar-top {
+  transform: translate(-50%, 23px) rotate(45deg);
+  transition: transform 0.3s;
+}
+
+body header .container .sp-nav .humberger-btn.close .bar-mid {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+body header .container .sp-nav .humberger-btn.close .bar-bot {
+  transform: translate(-50%, -23px) rotate(-45deg);
+  transition: transform 0.3s;
+}
+
+body header .container .sp-nav .humberger-btn .bar-top,
+body header .container .sp-nav .humberger-btn .bar-mid,
+body header .container .sp-nav .humberger-btn .bar-bot {
+  width: 60px;
+  height: 3px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+}
+
+body header .container .sp-nav .humberger-btn .bar-top {
+  top: 10px;
+}
+
+body header .container .sp-nav .humberger-btn .bar-mid {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body header .container .sp-nav .humberger-btn .bar-bot {
+  bottom: 10px;
+}
+
+body header .container .sp-nav .sp-menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.746);
+  color: #fff;
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+body header .container .sp-nav .sp-menu.active {
+  display: block;
+  opacity: 1;
+  z-index: 10;
+}
+
+body header .container .sp-nav .sp-menu ul {
+  padding: 0px;
+}
+
+body header .container .sp-nav .sp-menu ul li {
+  list-style: none;
+  font-size: 20px;
+  text-align: center;
+}
+
+body header .container .sp-nav .sp-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+body .load {
+  background-color: #fff;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  transition: 1s;
+  z-index: 999;
+}
+
+body .load.hidden {
+  opacity: 0;
+  transition: 1s;
+}
+
+body .load.d-none {
+  display: none;
+}
+
+body .load img {
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+body main {
+  padding-top: 90px;
+}
+
+body section {
+  margin-bottom: 100px;
+}
+
+body section .container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+body section .container h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+body section .container h2::before {
+  content: "";
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  border-bottom: 1px solid #5c8718;
+  background-color: #5c8718;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+body section#fv {
+  margin: 40px auto;
+}
+
+body section#fv .fv-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+body section#fv .fv-container .fv-inner {
+  width: 100%;
+  height: 400px;
+}
+
+body section#fv .fv-container .fv-inner img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+body section#news iframe {
+  margin: 0px auto !important;
+}
+
+body section#howtouse .container .card .text {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  body section#howtouse .container .card .text {
+    font-size: 16px;
+  }
+}
+
+body section#howtouse .container .card .card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 992px) {
+  body section#howtouse .container .card .card-container {
+    display: block;
+  }
+}
+
+body section#howtouse .container .card .card-container .card-box {
+  width: 25%;
+  text-align: center;
+  border: 1px solid #6b6b6b;
+  background-color: rgba(59, 127, 0, 0.2);
+  padding: 18px;
+}
+
+@media screen and (max-width: 992px) {
+  body section#howtouse .container .card .card-container .card-box {
+    width: 85%;
+    margin: 20px auto;
+  }
+}
+
+body section#howtouse .container .card .card-container .card-box .card-title {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+body section#howtouse .container .card .card-container .card-box .card-title img {
+  width: 36px;
+  margin-right: 5px;
+}
+
+body section#howtouse .container .card .card-container .card-box .card-img {
+  width: 100%;
+}
+
+body section#howtouse .container .card .card-container .card-box .card-img img {
+  width: 100%;
+}
+
+body section#howtouse .container .card .card-container .card-box .card-text {
+  font-size: 16px;
+  color: #6b6b6b;
+  padding-top: 20px;
+}
+
+body section#inside .container .inside-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+body section#inside .container .inside-card-container .inside-card {
+  width: 45%;
+  margin: auto;
+}
+
+body section#inside .container .inside-card-container .inside-card.even {
+  margin-top: 100px;
+}
+
+body section#inside .container .inside-card-container .inside-card .inside-card-img {
+  text-align: center;
+}
+
+body section#inside .container .inside-card-container .inside-card .inside-card-img img {
+  width: 85%;
+}
+
+body section#menu .container {
+  display: block;
+}
+
+body section#reserve .container .reserve-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  body section#reserve .container .reserve-content {
+    display: block;
+  }
+}
+
+body section#reserve .container .reserve-content .reserve-img {
+  width: 45%;
+}
+
+@media screen and (max-width: 992px) {
+  body section#reserve .container .reserve-content .reserve-img {
+    width: 85%;
+    margin: auto;
+  }
+}
+
+body section#reserve .container .reserve-content .reserve-img img {
+  width: 100%;
+}
+
+body section#reserve .container .reserve-content .reserve-info {
+  width: 45%;
+}
+
+@media screen and (max-width: 992px) {
+  body section#reserve .container .reserve-content .reserve-info {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+body section#reserve .container .reserve-content .reserve-info ul {
+  padding-left: 20px;
+}
+
+body section#reserve .container .reserve-content .reserve-info ul li {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 992px) {
+  body section#reserve .container .reserve-content .reserve-info ul li {
+    font-size: 16px;
+  }
+}
+
+body section#reserve .container .reserve-content .reserve-info .reserve-table {
+  font-size: 32px;
+  border-spacing: 0px 10px;
+  margin: auto;
+}
+
+@media screen and (max-width: 992px) {
+  body section#reserve .container .reserve-content .reserve-info .reserve-table {
+    font-size: 24px;
+  }
+}
+
+body section#reserve .container .reserve-content .reserve-info .reserve-table tr th {
+  text-align: left;
+  padding-right: 24px;
+}
+
+body section#access {
+  text-align: center;
+}
+
+body section#access .container .iframe-container {
+  border: 3px solid #5c8718;
+  box-sizing: border-box;
+  height: 450px;
+}
+
+body section#access .container .iframe-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+footer .container {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  border-top: 1px solid #000000;
+}
+
+img {
+  width: 300px;
+}
