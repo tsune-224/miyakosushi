@@ -329,9 +329,22 @@ body section#inside .container .inside-card-container {
   width: 100%;
 }
 
+@media screen and (max-width: 992px) {
+  body section#inside .container .inside-card-container {
+    display: block;
+  }
+}
+
 body section#inside .container .inside-card-container .inside-card {
   width: 45%;
   margin: auto;
+}
+
+@media screen and (max-width: 992px) {
+  body section#inside .container .inside-card-container .inside-card {
+    width: 85%;
+    margin: 20px auto;
+  }
 }
 
 body section#inside .container .inside-card-container .inside-card.even {

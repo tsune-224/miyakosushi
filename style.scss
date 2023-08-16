@@ -306,9 +306,16 @@ body {
           display: flex;
           flex-wrap: wrap;
           width: 100%;
+          @include mq("md") {
+            display: block;
+          }
           .inside-card {
             width: 45%;
             margin: auto;
+            @include mq("md") {
+              width: 85%;
+              margin: 20px auto;
+            }
             &.even {
               margin-top: 100px;
             }
