@@ -1,49 +1,48 @@
-$(function(){
+$(function () {
+  //ページ読み込み時
 
-  //ページ読み込み時 
-  
-  $(window).on('load' , function (){
-    setTimeout(function (){
-      $('.load').addClass('hidden');
-      setTimeout(function(){
-        $('.load').addClass('d-none');
-        $('body').removeClass('on_load');
-      },500)
-    },1000);
-  })
+  $(window).on("load", function () {
+    setTimeout(function () {
+      $(".load").addClass("hidden");
+      setTimeout(function () {
+        $(".load").addClass("d-none");
+        $("body").removeClass("on_load");
+      }, 500);
+    }, 1000);
+  });
 
   //header 制御
 
   var startPos = 0;
   var scrollPos = 0;
 
-  $(window).on('scroll' , function (){
+  $(window).on("scroll", function () {
     scrollPos = $(this).scrollTop();
 
     if (scrollPos >= startPos) {
-      $('header').addClass('hide');
+      $("header").addClass("hide");
     } else {
-      $('header').removeClass('hide');
+      $("header").removeClass("hide");
     }
 
     startPos = scrollPos;
   });
 
   //sp時ハンバーガー
-  $('.humberger-btn').on('click' , function(){
-    $('.humberger-btn').toggleClass('close');
-    $('.sp-menu').toggleClass('active');
-    $('body').toggleClass('sp-nav-active');
+  $(".hamburger-btn").on("click", function () {
+    $(".hamburger-btn").toggleClass("close");
+    $(".sp-menu").toggleClass("active");
+    $("body").toggleClass("sp-nav-active");
   });
 
-  $('.sp-menu a').on('click' , function(){
-    $('.humberger-btn').toggleClass('close');
-    $('.sp-menu').toggleClass('active');
-    $('body').toggleClass('sp-nav-active');
-  })
+  $(".sp-menu a").on("click", function () {
+    $(".hamburger-btn").toggleClass("close");
+    $(".sp-menu").toggleClass("active");
+    $("body").toggleClass("sp-nav-active");
+  });
 
   //slick.js
-  $('.fv-inner').slick({
+  $(".fv-inner").slick({
     arrows: false,
     dots: false,
     infinite: true,
@@ -53,4 +52,3 @@ $(function(){
     fade: true,
   });
 });
-  

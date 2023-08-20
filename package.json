@@ -4,20 +4,19 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write './**/*.{js,scss,html}'",
+    "cspell": "cspell lint -c cspell.json '**/*.{js,scss,html}'"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tsune-224/miyakosushi.git"
-  },
-  "author": "",
+  "repository": "git+https://github.com/tsune-224/miyakosushi.git",
+  "author": "Shunta Tsunemi <af19013@shibaura-it.ac.jp>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tsune-224/miyakosushi/issues"
   },
   "homepage": "https://github.com/tsune-224/miyakosushi#readme",
   "devDependencies": {
-    "prettier": "^3.0.1"
+    "prettier": "^3.0.2"
   },
   "dependencies": {
     "cspell": "^7.0.0"

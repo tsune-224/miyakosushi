@@ -1,0 +1,18 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "Shippori",
+    "howtouse"
+  ],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/.git/**",
+    "**/.vscode/**",
+    "**/yarn.lock",
+    "**/package-lock.json",
+    "**/package.json",
+    "**/style.css",
+    "**/style.min.css"
+  ]
+}
