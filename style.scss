@@ -196,15 +196,16 @@ body {
     }
   }
 
-  main {
-    //padding-top: 90px;
-  }
   section {
-    margin-bottom: 100px;
+    padding: 50px 0px;
     .container {
       width: 80%;
       max-width: 1200px;
       margin: 30px auto;
+      @include mq("md") {
+        width: 90%;
+        margin: 20px auto;
+      }
 
       h2 {
         text-align: center;
@@ -226,6 +227,10 @@ body {
     }
     &#fv {
       margin: 0px auto 40px;
+      padding: 0px;
+      @include mq("md") {
+        margin: 0px auto;
+      }
       .fv-container {
         width: 100%;
         max-width: 1200px;
@@ -242,10 +247,11 @@ body {
         }
       }
     }
-    &#main-text{
-      .container{
-        p{
+    &#main-text {
+      .container {
+        p {
           font-size: 20px;
+          font-weight: 500;
           line-height: 2;
           @include mq("md") {
             font-size: 16px;
@@ -290,6 +296,7 @@ body {
                 justify-content: center;
                 margin: auto;
                 padding-bottom: 20px;
+                font-weight: 800;
                 img {
                   width: 36px;
                   margin-right: 5px;
@@ -312,6 +319,7 @@ body {
       }
     }
     &#inside {
+      background-color: #fff;
       .container {
         .inside-card-container {
           display: flex;
@@ -322,13 +330,22 @@ body {
           }
           .inside-card {
             width: 45%;
-            margin: auto;
+            margin: 0px auto;
+            padding-bottom: 20px;
             @include mq("md") {
-              width: 85%;
+              width: 100%;
               margin: 20px auto;
             }
             &.even {
-              margin-top: 100px;
+              padding-top: 60px;
+              @include mq("md") {
+                padding-top: 0px;
+              }
+            }
+            &:last-child {
+              @include mq("md") {
+                padding-bottom: 0px;
+              }
             }
             .inside-card-img {
               text-align: center;
@@ -336,13 +353,44 @@ body {
                 width: 85%;
               }
             }
+            .inside-card-title {
+              font-size: 24px;
+              font-weight: 800;
+              text-align: center;
+              margin: 20px 0px;
+            }
+            .inside-card-text {
+              text-align: center;
+              font-size: 16px;
+              line-height: 1.5;
+              @include mq("md") {
+                font-size: 14px;
+              }
+            }
           }
         }
       }
     }
     &#menu {
+      background-color: #fff;
       .container {
         display: block;
+        .menu-btn {
+          &.invalid {
+            pointer-events: none;
+            h3 {
+              border-bottom: red 2px solid;
+            }
+          }
+        }
+        .menu-list {
+          &.active {
+            display: block;
+          }
+          &.close {
+            display: none;
+          }
+        }
         .menu-list li {
           list-style: none;
           display: flex;
@@ -352,7 +400,8 @@ body {
           font-size: 24px;
           font-weight: 800;
           white-space: nowrap;
-          .dotted{
+
+          .dotted {
             border-bottom: 2px dotted gray;
             width: 100%;
             margin: auto 12px;
@@ -414,6 +463,7 @@ body {
       }
     }
     &#access {
+      background-color: #fff;
       text-align: center;
       .container {
         .iframe-container {
@@ -432,6 +482,7 @@ body {
 }
 
 footer {
+  background-color: #fff;
   .container {
     width: 80%;
     max-width: 1200px;
@@ -441,4 +492,8 @@ footer {
 }
 img {
   width: 300px;
+}
+
+html {
+  scroll-behavior: smooth;
 }

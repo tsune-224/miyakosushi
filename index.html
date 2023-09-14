@@ -1,52 +1,56 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>都鮨 | 岩槻の寿司屋</title>
+    <link rel="stylesheet" href="/style.css" />
+    <!-- slick CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>都鮨 | 岩槻の寿司屋</title>
-  <link rel="stylesheet" href="/style.css" />
-  <!-- slick CSS -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-</head>
-
-<body class="on_load">
-  <header>
-    <div class="container">
-      <h1><img src="img/IMG_2503.PNG" alt="都鮨" /></h1>
-      <nav class="pc-nav">
-        <ul>
-          <li><a href="" id="test-1">トップ</a></li>
-          <li><a href="">最新情報</a></li>
-          <li><a href="">お品書き</a></li>
-          <li><a href="">アクセス</a></li>
-        </ul>
-      </nav>
-
-      <nav class="sp-nav" style="display: none">
-        <div class="hamburger-btn">
-          <div class="bar-top"></div>
-          <div class="bar-mid"></div>
-          <div class="bar-bot"></div>
-        </div>
-        <div class="sp-menu">
+  <body class="on_load">
+    <header>
+      <div class="container">
+        <h1><img src="img/IMG_2503.PNG" alt="都鮨" /></h1>
+        <nav class="pc-nav">
           <ul>
-            <li><a href="#" id="test-1">トップ</a></li>
-            <li><a href="#news">最新情報</a></li>
+            <li><a href="" id="test-1">トップ</a></li>
+            <li><a href="#inside">店内</a></li>
+            <li><a href="#howtouse">ご利用について</a></li>
             <li><a href="#menu">お品書き</a></li>
             <li><a href="#access">アクセス</a></li>
           </ul>
-        </div>
-      </nav>
-    </div>
-  </header>
+        </nav>
 
-  <!-- <div class="load" id="load">
+        <nav class="sp-nav" style="display: none">
+          <div class="hamburger-btn">
+            <div class="bar-top"></div>
+            <div class="bar-mid"></div>
+            <div class="bar-bot"></div>
+          </div>
+          <div class="sp-menu">
+            <ul>
+              <li><a href="#" id="test-1">トップ</a></li>
+              <li><a href="#news">最新情報</a></li>
+              <li><a href="#menu">お品書き</a></li>
+              <li><a href="#access">アクセス</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- <div class="load" id="load">
       <img src="img/IMG_2504.PNG" alt="" />
     </div> -->
 
-  <main>
-    <section id="fv">
+    <main>
+      <section id="fv">
         <div class="fv-container">
           <div class="fv-inner">
             <img src="img/miyako_top.jpeg" alt="" />
@@ -56,276 +60,302 @@
         </div>
       </section>
 
-    <section id="main-text">
-      <div class="container">
-        <p>
-          岩槻でのお食事は、「都鮨」へ
-          岩槻駅から徒歩10分でお越しいただけます。
-          『決して堅苦しくなく、親しみやすい…』そんな寿司屋を目指し、どなた様でも気軽にお立ち寄り頂ける雰囲気でのお食事を提供させていただきます。
-        </p>
-      </div>
-    </section>
-
-    <section id="inside">
-      <div class="container">
-        <h2>店内</h2>
-        <div class="inside-card-container">
-          <div class="inside-card counter">
-            <div class="inside-card-img">
-              <img src="img/IMG_2719.jpg" alt="" />
-            </div>
-            <div class="inside-card-titile">カウンター席</div>
-            <div class="inside-card-text">
-              <p>
-                落ち着いた照明のもと、ゆっくりとお食事をお楽しみいただけます。
-              </p>
-              <p>1~2名様でのご利用に。</p>
-            </div>
-          </div>
-          <div class="inside-card even">
-            <div class="inside-card-img">
-              <img src="img/IMG_2718.jpg" alt="" />
-            </div>
-            <div class="inside-card-titile">テーブル席</div>
-            <div class="inside-card-text">
-              <p>6人掛けが2卓、2人掛けが1卓ございます。</p>
-              <p>お子様連れ、年配の方でも靴を脱がずにご利用いただけます。</p>
-            </div>
-          </div>
-          <div class="inside-card">
-            <div class="inside-card-img">
-              <img src="img/IMG_2709.jpg" alt="" />
-            </div>
-            <div class="inside-card-titile">座敷席</div>
-            <div class="inside-card-text">
-              <p>座敷席は2部屋ご用意がございます。</p>
-              <p>10~20名程での宴会等にご利用いただけます。</p>
-            </div>
-          </div>
-          <div class="inside-card even">
-            <div class="inside-card-img">
-              <img src="img/IMG_2714.jpg" alt="" />
-            </div>
-          </div>
+      <section id="main-text">
+        <div class="container">
+          <!-- <p>
+            岩槻でのお食事は、「都鮨」へ
+            岩槻駅から徒歩10分でお越しいただけます。
+            『決して堅苦しくなく、親しみやすい…』そんな寿司屋を目指し、どなた様でも気軽にお立ち寄り頂ける雰囲気でのお食事を提供させていただきます。
+          </p> -->
+          <p>
+            岩槻でのお食事は、「都鮨」へ
+            <br />
+            岩槻駅より徒歩10分、どなた様でもお気軽にお越し頂けます。
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="howtouse">
-      <div class="container">
-        <h2>ご利用について</h2>
-
-        <div class="card">
-          <div class="card text">
-            <p>当店は、お一人様でも気軽にお越しいただけます。</p>
-            <p>
-              また、ご友人と・ご家族で・接待で・御祝いや法要で・忘新年会や各種ご宴会で(～20名様ぐらいまで)など、様々なシーンでご利用頂けます。
-            </p>
-            <p>仕出し料理も承っております(予約制)。</p>
-            <p>お気軽にご相談ください。</p>
-          </div>
-          <div class="card-container">
-            <div class="card-box">
-              <div class="card-title">
-                <img src="img/peke300.png" alt="" />
-                親しい人と
+      <section id="inside">
+        <div class="container">
+          <h2>店内</h2>
+          <div class="inside-card-container">
+            <div class="inside-card counter">
+              <div class="inside-card-img">
+                <img src="img/IMG_2719.jpg" alt="" />
               </div>
-              <div class="card-img">
-                <img src="img/DSCF2910.JPG" alt="" />
-              </div>
-              <div class="card-text">
-                お一人様で/ご友人と/同僚と/接待で/カップルで/ご夫婦で/ご家族で
-                など
+              <div class="inside-card-title">カウンター席</div>
+              <div class="inside-card-text">
+                <p>
+                  落ち着いた照明のもと、ゆっくりとお食事をお楽しみいただけます。
+                </p>
+                <p>1~2名様でのご利用に。</p>
               </div>
             </div>
-            <div class="card-box">
-              <div class="card-title">
-                <img src="img/peke300.png" alt="" />
-                御祝いや法要で
+            <div class="inside-card even">
+              <div class="inside-card-img">
+                <img src="img/IMG_2718.jpg" alt="" />
               </div>
-              <div class="card-img">
-                <img src="img/DSCF2906.JPG" alt="" />
-              </div>
-              <div class="card-text">
-                結納/顔合わせ/お食い初め/お宮参り/記念日/法要/法事 など
+              <div class="inside-card-title">テーブル席</div>
+              <div class="inside-card-text">
+                <p>6人掛けが2卓、2人掛けが1卓ございます。</p>
+                <p>お子様連れ、年配の方でも靴を脱がずにご利用いただけます。</p>
               </div>
             </div>
-            <div class="card-box">
-              <div class="card-title">
-                <img src="img/peke300.png" alt="" />
-                各種ご宴会で
-              </div>
-              <div class="card-img">
+            <div class="inside-card">
+              <div class="inside-card-img">
                 <img src="img/IMG_2709.jpg" alt="" />
               </div>
-              <div class="card-text">
-                忘年会/新年会/歓迎会/送別会/同窓会/接待 など
+              <div class="inside-card-title">座敷席</div>
+              <div class="inside-card-text">
+                <p>座敷席は2部屋ご用意がございます。</p>
+                <p>10~20名程での宴会等にご利用いただけます。</p>
+              </div>
+            </div>
+            <div class="inside-card even">
+              <div class="inside-card-img">
+                <img src="img/IMG_2714.jpg" alt="" />
+              </div>
+              <div class="inside-card-title">座敷席</div>
+              <div class="inside-card-text">
+                <p>座敷席は2部屋ご用意がございます。</p>
+                <p>10~20名程での宴会等にご利用いただけます。</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="menu">
-      <div class="container">
-        <h2>お品書き</h2>
-        <h3>お飲み物</h3>
-        <ul class="menu-list">
-          <li>
-            <div>生ビール・ビール</div>
-            <div class="dotted"></div>
-            <div>¥770</div>
-          </li>
-          <li>
-            <div>ノンアルコールビール</div>
-            <div class="dotted"></div>
-            <div>¥440</div>
-          </li>
-          <li>
-            <div>熱燗 (一合)</div>
-            <div class="dotted"></div>
-            <div>¥550</div>
-          </li>
-          <li>
-            <div>ソフトドリンク</div>
-            <div class="dotted"></div>
-            <div>¥550</div>
-          </li>
-          <li>
-            <div>焼酎</div>
-            <div class="dotted"></div>
-            <div>¥660</div>
-          </li>
-          <li>
-            <div>梅酒</div>
-            <div class="dotted"></div>
-            <div>¥660</div>
-          </li>
-          <li>
-            <div>ウイスキー</div>
-            <div class="dotted"></div>
-            <div>¥660</div>
-          </li>
-          <li>
-            <div>冷酒</div>
-            <div class="dotted"></div>
-            <div>¥1100</div>
-          </li>
-          <li>
-            <div>久保田</div>
-            <div class="dotted"></div>
-            <div>¥4400</div>
-          </li>
-          <li>
-            <div>黒霧島</div>
-            <div class="dotted"></div>
-            <div>¥3300</div>
-          </li>
-          <li>
-            <div>赤霧島</div>
-            <div class="dotted"></div>
-            <div>¥4400</div>
-          </li>
-          <li>
-            <div>吉四六</div>
-            <div class="dotted"></div>
-            <div>¥4400</div>
-          </li>
-          <li>
-            <div>ウイスキー角</div>
-            <div class="dotted"></div>
-            <div>¥4400</div>
-          </li>
-          <li>
-            <div>魔王</div>
-            <div class="dotted"></div>
-            <div>¥1650</div>
-          </li>
-          <li>
-            <div>ワイン・シャンパン</div>
-            <div class="dotted"></div>
-            <div>¥3300~</div>
-          </li>
-        </ul>
-      </div>
-    </section>
+      <section id="howtouse">
+        <div class="container">
+          <h2>ご利用について</h2>
 
-    <section id="reserve">
-      <div class="container">
-        <h2>ご予約について</h2>
-        <div class="reserve-content">
-          <div class="reserve-img">
-            <img src="img/DSCF2949.JPG" alt="" />
-          </div>
-          <div class="reserve-info">
-            <ul>
-              <li>ご予約、出前はお電話にてお願い致します。</li>
-              <li>都合により、営業時間が前後する場合がございます。</li>
-              <li>月曜日以外にも臨時休業する場合がございます。</li>
-            </ul>
-            <table class="reserve-table">
-              <tr>
-                <th>TEL</th>
-                <td>048-756-0031</td>
-              </tr>
-              <tr>
-                <th rowspan="2">営業時間</th>
-                <td>10:00~13:00</td>
-              </tr>
-              <tr>
-                <td>17:00~22:00</td>
-              </tr>
-              <tr>
-                <th>定休日</th>
-                <td>毎週月曜日</td>
-              </tr>
-            </table>
+          <div class="card">
+            <div class="card text">
+              <p>当店は、お一人様でも気軽にお越しいただけます。</p>
+              <p>
+                また、ご友人と・ご家族で・接待で・御祝いや法要で・忘新年会や各種ご宴会で(～20名様ぐらいまで)など、様々なシーンでご利用頂けます。
+              </p>
+              <p>
+                仕出し料理も承っております(予約制)。
+                <br />お気軽にご相談ください。
+              </p>
+            </div>
+            <div class="card-container">
+              <div class="card-box">
+                <div class="card-title">
+                  <img src="img/peke300.png" alt="" />
+                  親しい人と
+                </div>
+                <div class="card-img">
+                  <img src="img/DSCF2910.JPG" alt="" />
+                </div>
+                <div class="card-text">
+                  お一人様で/ご友人と/同僚と/接待で/カップルで/ご夫婦で/ご家族で
+                  など
+                </div>
+              </div>
+              <div class="card-box">
+                <div class="card-title">
+                  <img src="img/peke300.png" alt="" />
+                  御祝いや法要で
+                </div>
+                <div class="card-img">
+                  <img src="img/DSCF2906.JPG" alt="" />
+                </div>
+                <div class="card-text">
+                  結納/顔合わせ/お食い初め/お宮参り/記念日/法要/法事 など
+                </div>
+              </div>
+              <div class="card-box">
+                <div class="card-title">
+                  <img src="img/peke300.png" alt="" />
+                  各種ご宴会で
+                </div>
+                <div class="card-img">
+                  <img src="img/IMG_2709.jpg" alt="" />
+                </div>
+                <div class="card-text">
+                  忘年会/新年会/歓迎会/送別会/同窓会/接待 など
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="access">
-      <div class="container">
-        <h2>アクセス</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d777.6432998599327!2d139.6992427728803!3d35.947333609776344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018bf5181e37b85%3A0x7ae635f4595b211d!2z44CSMzM5LTAwNTcg5Z-8546J55yM44GV44GE44Gf44G-5biC5bKp5qe75Yy65pys55S677yU5LiB55uu77yR77yR4oiS77yS77yQIOmDvemuqA!5e0!3m2!1sja!2sjp!4v1631988587593!5m2!1sja!2sjp"
-            width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+      <section id="menu">
+        <div class="container">
+          <h2>お品書き</h2>
+          <a class="menu-btn invalid">
+            <h3>お食事</h3>
+          </a>
+          <a class="menu-btn btn">
+            <h3>お飲み物</h3>
+          </a>
+          <ul class="menu-list food-list active">
+            <li>
+              <div>寿司</div>
+              <div class="dotted"></div>
+              <div>¥770</div>
+            </li>
+          </ul>
+          <ul class="menu-list drink-list close">
+            <li>
+              <div>生ビール・ビール</div>
+              <div class="dotted"></div>
+              <div>¥770</div>
+            </li>
+            <li>
+              <div>ノンアルコールビール</div>
+              <div class="dotted"></div>
+              <div>¥440</div>
+            </li>
+            <li>
+              <div>熱燗 (一合)</div>
+              <div class="dotted"></div>
+              <div>¥550</div>
+            </li>
+            <li>
+              <div>ソフトドリンク</div>
+              <div class="dotted"></div>
+              <div>¥550</div>
+            </li>
+            <li>
+              <div>焼酎</div>
+              <div class="dotted"></div>
+              <div>¥660</div>
+            </li>
+            <li>
+              <div>梅酒</div>
+              <div class="dotted"></div>
+              <div>¥660</div>
+            </li>
+            <li>
+              <div>ウイスキー</div>
+              <div class="dotted"></div>
+              <div>¥660</div>
+            </li>
+            <li>
+              <div>冷酒</div>
+              <div class="dotted"></div>
+              <div>¥1100</div>
+            </li>
+            <li>
+              <div>久保田</div>
+              <div class="dotted"></div>
+              <div>¥4400</div>
+            </li>
+            <li>
+              <div>黒霧島</div>
+              <div class="dotted"></div>
+              <div>¥3300</div>
+            </li>
+            <li>
+              <div>赤霧島</div>
+              <div class="dotted"></div>
+              <div>¥4400</div>
+            </li>
+            <li>
+              <div>吉四六</div>
+              <div class="dotted"></div>
+              <div>¥4400</div>
+            </li>
+            <li>
+              <div>ウイスキー角</div>
+              <div class="dotted"></div>
+              <div>¥4400</div>
+            </li>
+            <li>
+              <div>魔王</div>
+              <div class="dotted"></div>
+              <div>¥1650</div>
+            </li>
+            <li>
+              <div>ワイン・シャンパン</div>
+              <div class="dotted"></div>
+              <div>¥3300~</div>
+            </li>
+          </ul>
         </div>
-        <p>埼玉県さいたま市岩槻区本町４丁目１１−２０</p>
-        <p>東武アーバンパークライン岩槻駅東口より徒歩8分</p>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <ul id="gallery" class="gallery"></ul>
-      <div class="instagram-gallery"></div>
-    </section>
+      <section id="reserve">
+        <div class="container">
+          <h2>ご予約について</h2>
+          <div class="reserve-content">
+            <div class="reserve-img">
+              <img src="img/DSCF2949.JPG" alt="" />
+            </div>
+            <div class="reserve-info">
+              <ul>
+                <li>ご予約、出前はお電話にてお願い致します。</li>
+                <li>都合により、営業時間が前後する場合がございます。</li>
+                <li>月曜日以外にも臨時休業する場合がございます。</li>
+              </ul>
+              <table class="reserve-table">
+                <tr>
+                  <th>TEL</th>
+                  <td>048-756-0031</td>
+                </tr>
+                <tr>
+                  <th rowspan="2">営業時間</th>
+                  <td>10:00~13:00</td>
+                </tr>
+                <tr>
+                  <td>17:00~22:00</td>
+                </tr>
+                <tr>
+                  <th>定休日</th>
+                  <td>毎週月曜日</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section id="information">
-      <div class="container"></div>
-    </section>
+      <section id="access">
+        <div class="container">
+          <h2>アクセス</h2>
+          <div class="iframe-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d777.6432998599327!2d139.6992427728803!3d35.947333609776344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018bf5181e37b85%3A0x7ae635f4595b211d!2z44CSMzM5LTAwNTcg5Z-8546J55yM44GV44GE44Gf44G-5biC5bKp5qe75Yy65pys55S677yU5LiB55uu77yR77yR4oiS77yS77yQIOmDvemuqA!5e0!3m2!1sja!2sjp!4v1631988587593!5m2!1sja!2sjp"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+          <p>埼玉県さいたま市岩槻区本町４丁目１１−２０</p>
+          <p>東武アーバンパークライン岩槻駅東口より徒歩8分</p>
+        </div>
+      </section>
 
-    <footer>
-      <div class="container">
-        <h2>都鮨</h2>
-        <p>住所 : 〒339-0057 埼玉県さいたま市岩槻区本町4丁目11-20</p>
-        <p>電話 : 048-756-0031</p>
-        <p>＊ご予約、出前、各種お問い合わせはお気軽にお電話ください</p>
-        <p></p>
-      </div>
-    </footer>
-  </main>
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
+      <footer>
+        <div class="container">
+          <h2>都鮨</h2>
+          <p>住所 : 〒339-0057 埼玉県さいたま市岩槻区本町4丁目11-20</p>
+          <p>電話 : 048-756-0031</p>
+          <p style="margin-bottom: 0px; padding-bottom: 10px">
+            ＊ご予約、出前、各種お問い合わせはお気軽にお電話ください
+          </p>
+        </div>
+      </footer>
+    </main>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- slick JavaScript -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-  <script src="main.js"></script>
-</body>
-
+    <!-- slick JavaScript -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="main.js"></script>
+  </body>
 </html>

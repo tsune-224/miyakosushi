@@ -41,6 +41,20 @@ $(function () {
     $("body").toggleClass("sp-nav-active");
   });
 
+  //メニュー表示制御
+  $(".menu-btn").on("click", function () {
+    $(".menu-list").toggleClass("active");
+    $(".menu-list").toggleClass("close");
+    $(".menu-btn").toggleClass("invalid");
+  });
+
+  // $(".drink-btn").on("click", function () {
+  //   $(".drink-list").toggleClass("active");
+  //   $(".food-list").toggleClass("close");
+  //   $(".drink-btn").toggleClass("invalid");
+  //   $(".food-btn").toggleClass("invalid");
+  // });
+
   //slick.js
   $(".fv-inner").slick({
     arrows: false,

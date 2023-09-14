@@ -170,12 +170,18 @@ body .load img {
   -ms-transform: translate(-50%, -50%);
 }
 body section {
-  margin-bottom: 100px;
+  padding: 50px 0px;
 }
 body section .container {
   width: 80%;
   max-width: 1200px;
   margin: 30px auto;
+}
+@media screen and (max-width: 992px) {
+  body section .container {
+    width: 90%;
+    margin: 20px auto;
+  }
 }
 body section .container h2 {
   text-align: center;
@@ -196,6 +202,12 @@ body section .container h2::before {
 }
 body section#fv {
   margin: 0px auto 40px;
+  padding: 0px;
+}
+@media screen and (max-width: 992px) {
+  body section#fv {
+    margin: 0px auto;
+  }
 }
 body section#fv .fv-container {
   width: 100%;
@@ -215,6 +227,7 @@ body section#fv .fv-container .fv-inner img {
 }
 body section#main-text .container p {
   font-size: 20px;
+  font-weight: 500;
   line-height: 2;
 }
 @media screen and (max-width: 992px) {
@@ -262,6 +275,7 @@ body section#howtouse .container .card .card-container .card-box .card-title {
   justify-content: center;
   margin: auto;
   padding-bottom: 20px;
+  font-weight: 800;
 }
 body section#howtouse .container .card .card-container .card-box .card-title img {
   width: 36px;
@@ -278,6 +292,9 @@ body section#howtouse .container .card .card-container .card-box .card-text {
   color: #6b6b6b;
   padding-top: 20px;
 }
+body section#inside {
+  background-color: #fff;
+}
 body section#inside .container .inside-card-container {
   display: flex;
   flex-wrap: wrap;
@@ -290,16 +307,27 @@ body section#inside .container .inside-card-container {
 }
 body section#inside .container .inside-card-container .inside-card {
   width: 45%;
-  margin: auto;
+  margin: 0px auto;
+  padding-bottom: 20px;
 }
 @media screen and (max-width: 992px) {
   body section#inside .container .inside-card-container .inside-card {
-    width: 85%;
+    width: 100%;
     margin: 20px auto;
   }
 }
 body section#inside .container .inside-card-container .inside-card.even {
-  margin-top: 100px;
+  padding-top: 60px;
+}
+@media screen and (max-width: 992px) {
+  body section#inside .container .inside-card-container .inside-card.even {
+    padding-top: 0px;
+  }
+}
+@media screen and (max-width: 992px) {
+  body section#inside .container .inside-card-container .inside-card:last-child {
+    padding-bottom: 0px;
+  }
 }
 body section#inside .container .inside-card-container .inside-card .inside-card-img {
   text-align: center;
@@ -307,8 +335,39 @@ body section#inside .container .inside-card-container .inside-card .inside-card-
 body section#inside .container .inside-card-container .inside-card .inside-card-img img {
   width: 85%;
 }
+body section#inside .container .inside-card-container .inside-card .inside-card-title {
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  margin: 20px 0px;
+}
+body section#inside .container .inside-card-container .inside-card .inside-card-text {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+}
+@media screen and (max-width: 992px) {
+  body section#inside .container .inside-card-container .inside-card .inside-card-text {
+    font-size: 14px;
+  }
+}
+body section#menu {
+  background-color: #fff;
+}
 body section#menu .container {
   display: block;
+}
+body section#menu .container .menu-btn.invalid {
+  pointer-events: none;
+}
+body section#menu .container .menu-btn.invalid h3 {
+  border-bottom: red 2px solid;
+}
+body section#menu .container .menu-list.active {
+  display: block;
+}
+body section#menu .container .menu-list.close {
+  display: none;
 }
 body section#menu .container .menu-list li {
   list-style: none;
@@ -383,6 +442,7 @@ body section#reserve .container .reserve-content .reserve-info .reserve-table tr
   padding-right: 24px;
 }
 body section#access {
+  background-color: #fff;
   text-align: center;
 }
 body section#access .container .iframe-container {
@@ -395,6 +455,9 @@ body section#access .container .iframe-container iframe {
   height: 100%;
 }
 
+footer {
+  background-color: #fff;
+}
 footer .container {
   width: 80%;
   max-width: 1200px;
@@ -404,4 +467,8 @@ footer .container {
 
 img {
   width: 300px;
+}
+
+html {
+  scroll-behavior: smooth;
 }/*# sourceMappingURL=style.css.map */
