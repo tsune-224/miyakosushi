@@ -240,10 +240,12 @@ body section#news iframe {
 }
 body section#howtouse .container .card .text {
   font-size: 20px;
+  text-align: center;
+  line-height: 1.5;
 }
 @media screen and (max-width: 992px) {
   body section#howtouse .container .card .text {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 body section#howtouse .container .card .card-container {
@@ -288,7 +290,7 @@ body section#howtouse .container .card .card-container .card-box .card-img img {
   width: 100%;
 }
 body section#howtouse .container .card .card-container .card-box .card-text {
-  font-size: 16px;
+  font-size: 18px;
   color: #6b6b6b;
   padding-top: 20px;
 }
@@ -346,22 +348,26 @@ body section#inside .container .inside-card-container .inside-card .inside-card-
   font-size: 16px;
   line-height: 1.5;
 }
-@media screen and (max-width: 992px) {
-  body section#inside .container .inside-card-container .inside-card .inside-card-text {
-    font-size: 14px;
-  }
-}
 body section#menu {
   background-color: #fff;
 }
 body section#menu .container {
   display: block;
 }
-body section#menu .container .menu-btn.invalid {
-  pointer-events: none;
+body section#menu .container .menu-btn-area {
+  display: flex;
+  justify-content: center;
 }
-body section#menu .container .menu-btn.invalid h3 {
-  border-bottom: red 2px solid;
+body section#menu .container .menu-btn-area .menu-btn {
+  cursor: pointer;
+  margin: auto;
+  font-size: 24px;
+  color: gray;
+}
+body section#menu .container .menu-btn-area .menu-btn.invalid {
+  pointer-events: none;
+  border-bottom: green 2px solid;
+  color: #000;
 }
 body section#menu .container .menu-list.active {
   display: block;

@@ -269,8 +269,10 @@ body {
         .card {
           .text {
             font-size: 20px;
+            text-align: center;
+            line-height: 1.5;
             @include mq("md") {
-              font-size: 16px;
+              font-size: 18px;
             }
           }
           .card-container {
@@ -309,7 +311,7 @@ body {
                 }
               }
               .card-text {
-                font-size: 16px;
+                font-size: 18px;
                 color: #6b6b6b;
                 padding-top: 20px;
               }
@@ -363,9 +365,6 @@ body {
               text-align: center;
               font-size: 16px;
               line-height: 1.5;
-              @include mq("md") {
-                font-size: 14px;
-              }
             }
           }
         }
@@ -375,11 +374,18 @@ body {
       background-color: #fff;
       .container {
         display: block;
-        .menu-btn {
-          &.invalid {
-            pointer-events: none;
-            h3 {
-              border-bottom: red 2px solid;
+        .menu-btn-area {
+          display: flex;
+           justify-content: center;
+          .menu-btn {
+            cursor: pointer;
+            margin: auto;
+            font-size: 24px;
+            color: gray;
+            &.invalid {
+              pointer-events: none;
+              border-bottom: green 2px solid;
+              color: #000;
             }
           }
         }
