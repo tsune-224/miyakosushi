@@ -27,8 +27,12 @@ $(function () {
     inPageTransition($(this).attr("class"));
   });
 
+  $(".pc-nav a").on("click", function () {
+    inPageTransition($(this).attr("class"));
+  });
+
   function inPageTransition(link) {
-    let position = $(`#${link}`).offset().top;
+    let position = link === "top" ? 0 : $(`#${link}`).offset().top;
     $("html,body").animate({ scrollTop: position }, 300);
     return false;
   }
