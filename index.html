@@ -5,21 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>都鮨 | 岩槻の寿司屋</title>
     <link rel="stylesheet" href="/style.css" />
-    <!-- slick CSS -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
   </head>
 
-  <body class="on_load">
+  <body>
     <header>
       <div class="container">
         <h1><img src="img/IMG_2503.PNG" alt="都鮨" /></h1>
         <nav class="pc-nav">
           <ul>
-            <li><a href="" id="test-1">トップ</a></li>
+            <li><a href="">トップ</a></li>
             <li><a href="#inside">店内</a></li>
             <li><a href="#howtouse">ご利用について</a></li>
             <li><a href="#menu">お品書き</a></li>
@@ -27,7 +21,7 @@
           </ul>
         </nav>
 
-        <nav class="sp-nav" style="display: none">
+        <nav class="sp-nav">
           <div class="hamburger-btn">
             <div class="bar-top"></div>
             <div class="bar-mid"></div>
@@ -35,32 +29,29 @@
           </div>
           <div class="sp-menu">
             <ul>
-              <li><a href="#" id="test-1">トップ</a></li>
-              <li><a href="#news">最新情報</a></li>
-              <li><a href="#menu">お品書き</a></li>
-              <li><a href="#access">アクセス</a></li>
+              <li><a class="top">トップ</a></li>
+              <li><a class="inside">店内</a></li>
+              <li><a class="howtouse">ご利用について</a></li>
+              <li><a class="menu">お品書き</a></li>
+              <li><a class="reserve">ご予約について</a></li>
+              <li><a class="access">アクセス</a></li>
             </ul>
           </div>
         </nav>
       </div>
     </header>
 
-    <!-- <div class="load" id="load">
-      <img src="img/IMG_2504.PNG" alt="" />
-    </div> -->
-
     <main>
       <section id="fv">
         <div class="fv-container">
           <div class="fv-inner">
-            <img src="img/miyako_top.jpeg" alt="" />
-            <img src="img/DSCF2901.JPG" alt="" />
-            <img src="img/DSCF2906.JPG" alt="" />
+            <img class="pc-fv" src="img/IMG_2503.PNG" alt="" />
+            <img class="sp-fv" src="img/IMG_2504.PNG" alt="" />
           </div>
         </div>
       </section>
 
-      <section id="main-text">
+      <!-- <section id="main-text">
         <div class="container">
           <p>
             岩槻でのお食事は、「都鮨」へ
@@ -68,7 +59,7 @@
             岩槻駅より徒歩10分、どなた様でもお気軽にお越し頂けます。
           </p>
         </div>
-      </section>
+      </section> -->
 
       <section id="inside">
         <div class="container">
@@ -182,10 +173,8 @@
         <div class="container">
           <h2>お品書き</h2>
           <div class="menu-btn-area">
-            <div class="menu-btn invalid">お食事
-            </div>
-            <div class="menu-btn btn">お飲み物
-            </div>
+            <div class="menu-btn invalid">お食事</div>
+            <div class="menu-btn btn">お飲み物</div>
           </div>
           <ul class="menu-list food-list active">
             <li>
@@ -344,13 +333,6 @@
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"
     ></script>
-
-    <!-- slick JavaScript -->
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <script src="main.js"></script>
   </body>
 </html>

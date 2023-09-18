@@ -19,35 +19,41 @@ body {
   font-family: "Shippori Mincho", serif;
   margin: 0px;
   position: relative;
+  @include mq("md") {
+    background-size: unset;
+  }
   &.on_load {
     overflow: hidden;
   }
   &.sp-nav-active {
     overflow: hidden;
   }
-  h1 {
-    font-family: "Shippori Mincho", serif;
-    font-weight: 800;
-    margin: 0px;
-    height: 90px;
-    img {
-      width: 150px;
-      height: 100%;
-    }
-  }
+  // h1 {
+  //   font-family: "Shippori Mincho", serif;
+  //   font-weight: 800;
+  //   margin: 0px;
+  //   height: 90px;
+  //   img {
+  //     width: 150px;
+  //     height: 100%;
+  //   }
+  // }
 
   header {
     position: fixed;
     width: 100%;
-    height: 90px;
+    // height: 90px;
     background-color: rgba(92, 135, 24, 0.6);
     box-shadow: 0px 0px 10px #000;
     z-index: 1;
     transition: all 0.5s;
     opacity: 1;
     &.hide {
-      opacity: 0;
+      opacity: 1;
       transform: translateY(-110px);
+      @include mq("md") {
+        transform: translateY(0px);
+      }
     }
 
     .container {
@@ -57,6 +63,21 @@ body {
       width: 90%;
       max-width: 1200px;
       margin: auto;
+
+      h1 {
+        margin: 0px;
+        height: 90px;
+        @include mq("md") {
+          height: 60px;
+        }
+        img {
+          width: 150px;
+          height: 100%;
+          @include mq("md") {
+            width: 100px;
+          }
+        }
+      }
 
       .pc-nav {
         width: 50%;
@@ -79,16 +100,16 @@ body {
       }
 
       .sp-nav {
+        display: none;
         width: auto;
         height: 100%;
-        display: none;
         @include mq("md") {
           display: block;
         }
         .hamburger-btn {
           display: block;
-          width: 60px;
-          height: 70px;
+          width: 30px;
+          height: 30px;
           position: relative;
           z-index: 11;
           border: none;
@@ -96,23 +117,27 @@ body {
 
           &.close {
             .bar-top {
-              transform: translate(-50%, 23px) rotate(45deg);
+              transform: translate(-50%, 0px) rotate(45deg);
               transition: transform 0.3s;
+              top: calc(50% - 2px);
             }
             .bar-mid {
               opacity: 0;
+              width: 2px;
+              z-index: 100;
               transition: opacity 0.3s;
             }
             .bar-bot {
-              transform: translate(-50%, -23px) rotate(-45deg);
+              transform: translate(-50%, 0px) rotate(-45deg);
               transition: transform 0.3s;
+              bottom: calc(50% - 1px);
             }
           }
 
           .bar-top,
           .bar-mid,
           .bar-bot {
-            width: 60px;
+            width: 30px;
             height: 3px;
             display: block;
             position: absolute;
@@ -121,19 +146,19 @@ body {
             background-color: #fff;
           }
           .bar-top {
-            top: 10px;
+            top: 5px;
           }
           .bar-mid {
             top: 50%;
             transform: translate(-50%, -50%);
           }
           .bar-bot {
-            bottom: 10px;
+            bottom: 5px;
           }
         }
 
         .sp-menu {
-          // display: none;
+          display: none;
           width: 100vw;
           height: 100vh;
           background-color: rgba(0, 0, 0, 0.746);
@@ -160,6 +185,7 @@ body {
               list-style: none;
               font-size: 20px;
               text-align: center;
+              padding: 14px 0px;
               a {
                 color: #fff;
                 text-decoration: none;
@@ -237,12 +263,24 @@ body {
         margin: auto;
         .fv-inner {
           width: 100%;
-          //height: 400px;
+          max-width: 1200px;
           img {
             width: 100%;
-            max-height: 675px;
-            object-fit: cover;
+            height: 100vh;
+            object-fit: scale-down;
             object-position: center;
+            &.pc-fv {
+              display: block;
+              @include mq("md") {
+                display: none;
+              }
+            }
+            &.sp-fv {
+              display: none;
+              @include mq("md") {
+                display: block;
+              }
+            }
           }
         }
       }
@@ -273,6 +311,7 @@ body {
             line-height: 1.5;
             @include mq("md") {
               font-size: 18px;
+              text-align: left;
             }
           }
           .card-container {
@@ -353,6 +392,9 @@ body {
               text-align: center;
               img {
                 width: 85%;
+                @include mq("md") {
+                  width: 100%;
+                }
               }
             }
             .inside-card-title {
@@ -365,6 +407,9 @@ body {
               text-align: center;
               font-size: 16px;
               line-height: 1.5;
+              @include mq("md") {
+                text-align: left;
+              }
             }
           }
         }
@@ -376,7 +421,7 @@ body {
         display: block;
         .menu-btn-area {
           display: flex;
-           justify-content: center;
+          justify-content: center;
           .menu-btn {
             cursor: pointer;
             margin: auto;
@@ -390,6 +435,9 @@ body {
           }
         }
         .menu-list {
+          @include mq("md") {
+            padding-left: 0px;
+          }
           &.active {
             display: block;
           }
@@ -494,6 +542,9 @@ footer {
     max-width: 1200px;
     margin: auto;
     border-top: 1px solid #000000;
+    @include mq("md") {
+      width: 90%;
+    }
   }
 }
 img {

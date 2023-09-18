@@ -7,26 +7,20 @@ body {
   margin: 0px;
   position: relative;
 }
+@media screen and (max-width: 992px) {
+  body {
+    background-size: unset;
+  }
+}
 body.on_load {
   overflow: hidden;
 }
 body.sp-nav-active {
   overflow: hidden;
 }
-body h1 {
-  font-family: "Shippori Mincho", serif;
-  font-weight: 800;
-  margin: 0px;
-  height: 90px;
-}
-body h1 img {
-  width: 150px;
-  height: 100%;
-}
 body header {
   position: fixed;
   width: 100%;
-  height: 90px;
   background-color: rgba(92, 135, 24, 0.6);
   box-shadow: 0px 0px 10px #000;
   z-index: 1;
@@ -34,8 +28,13 @@ body header {
   opacity: 1;
 }
 body header.hide {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(-110px);
+}
+@media screen and (max-width: 992px) {
+  body header.hide {
+    transform: translateY(0px);
+  }
 }
 body header .container {
   display: flex;
@@ -44,6 +43,24 @@ body header .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+}
+body header .container h1 {
+  margin: 0px;
+  height: 90px;
+}
+@media screen and (max-width: 992px) {
+  body header .container h1 {
+    height: 60px;
+  }
+}
+body header .container h1 img {
+  width: 150px;
+  height: 100%;
+}
+@media screen and (max-width: 992px) {
+  body header .container h1 img {
+    width: 100px;
+  }
 }
 body header .container .pc-nav {
   width: 50%;
@@ -65,9 +82,9 @@ body header .container .pc-nav ul li a {
   text-decoration: none;
 }
 body header .container .sp-nav {
+  display: none;
   width: auto;
   height: 100%;
-  display: none;
 }
 @media screen and (max-width: 992px) {
   body header .container .sp-nav {
@@ -76,29 +93,33 @@ body header .container .sp-nav {
 }
 body header .container .sp-nav .hamburger-btn {
   display: block;
-  width: 60px;
-  height: 70px;
+  width: 30px;
+  height: 30px;
   position: relative;
   z-index: 11;
   border: none;
   cursor: pointer;
 }
 body header .container .sp-nav .hamburger-btn.close .bar-top {
-  transform: translate(-50%, 23px) rotate(45deg);
+  transform: translate(-50%, 0px) rotate(45deg);
   transition: transform 0.3s;
+  top: calc(50% - 2px);
 }
 body header .container .sp-nav .hamburger-btn.close .bar-mid {
   opacity: 0;
+  width: 2px;
+  z-index: 100;
   transition: opacity 0.3s;
 }
 body header .container .sp-nav .hamburger-btn.close .bar-bot {
-  transform: translate(-50%, -23px) rotate(-45deg);
+  transform: translate(-50%, 0px) rotate(-45deg);
   transition: transform 0.3s;
+  bottom: calc(50% - 1px);
 }
 body header .container .sp-nav .hamburger-btn .bar-top,
 body header .container .sp-nav .hamburger-btn .bar-mid,
 body header .container .sp-nav .hamburger-btn .bar-bot {
-  width: 60px;
+  width: 30px;
   height: 3px;
   display: block;
   position: absolute;
@@ -107,16 +128,17 @@ body header .container .sp-nav .hamburger-btn .bar-bot {
   background-color: #fff;
 }
 body header .container .sp-nav .hamburger-btn .bar-top {
-  top: 10px;
+  top: 5px;
 }
 body header .container .sp-nav .hamburger-btn .bar-mid {
   top: 50%;
   transform: translate(-50%, -50%);
 }
 body header .container .sp-nav .hamburger-btn .bar-bot {
-  bottom: 10px;
+  bottom: 5px;
 }
 body header .container .sp-nav .sp-menu {
+  display: none;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.746);
@@ -140,6 +162,7 @@ body header .container .sp-nav .sp-menu ul li {
   list-style: none;
   font-size: 20px;
   text-align: center;
+  padding: 14px 0px;
 }
 body header .container .sp-nav .sp-menu ul li a {
   color: #fff;
@@ -216,14 +239,31 @@ body section#fv .fv-container {
 }
 body section#fv .fv-container .fv-inner {
   width: 100%;
+  max-width: 1200px;
 }
 body section#fv .fv-container .fv-inner img {
   width: 100%;
-  max-height: 675px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 100vh;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
   -o-object-position: center;
      object-position: center;
+}
+body section#fv .fv-container .fv-inner img.pc-fv {
+  display: block;
+}
+@media screen and (max-width: 992px) {
+  body section#fv .fv-container .fv-inner img.pc-fv {
+    display: none;
+  }
+}
+body section#fv .fv-container .fv-inner img.sp-fv {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  body section#fv .fv-container .fv-inner img.sp-fv {
+    display: block;
+  }
 }
 body section#main-text .container p {
   font-size: 20px;
@@ -246,6 +286,7 @@ body section#howtouse .container .card .text {
 @media screen and (max-width: 992px) {
   body section#howtouse .container .card .text {
     font-size: 18px;
+    text-align: left;
   }
 }
 body section#howtouse .container .card .card-container {
@@ -337,6 +378,11 @@ body section#inside .container .inside-card-container .inside-card .inside-card-
 body section#inside .container .inside-card-container .inside-card .inside-card-img img {
   width: 85%;
 }
+@media screen and (max-width: 992px) {
+  body section#inside .container .inside-card-container .inside-card .inside-card-img img {
+    width: 100%;
+  }
+}
 body section#inside .container .inside-card-container .inside-card .inside-card-title {
   font-size: 24px;
   font-weight: 800;
@@ -347,6 +393,11 @@ body section#inside .container .inside-card-container .inside-card .inside-card-
   text-align: center;
   font-size: 16px;
   line-height: 1.5;
+}
+@media screen and (max-width: 992px) {
+  body section#inside .container .inside-card-container .inside-card .inside-card-text {
+    text-align: left;
+  }
 }
 body section#menu {
   background-color: #fff;
@@ -368,6 +419,11 @@ body section#menu .container .menu-btn-area .menu-btn.invalid {
   pointer-events: none;
   border-bottom: green 2px solid;
   color: #000;
+}
+@media screen and (max-width: 992px) {
+  body section#menu .container .menu-list {
+    padding-left: 0px;
+  }
 }
 body section#menu .container .menu-list.active {
   display: block;
@@ -469,6 +525,11 @@ footer .container {
   max-width: 1200px;
   margin: auto;
   border-top: 1px solid #000000;
+}
+@media screen and (max-width: 992px) {
+  footer .container {
+    width: 90%;
+  }
 }
 
 img {
