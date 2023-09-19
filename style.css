@@ -421,6 +421,9 @@ body section#menu .container .menu-btn-area .menu-btn.invalid {
   border-bottom: green 2px solid;
   color: #000;
 }
+body section#menu .container .menu-list {
+  overflow-x: scroll;
+}
 @media screen and (max-width: 992px) {
   body section#menu .container .menu-list {
     padding-left: 0px;

@@ -436,6 +436,7 @@ body {
           }
         }
         .menu-list {
+          overflow-x: scroll;
           @include mq("md") {
             padding-left: 0px;
           }
