@@ -523,6 +523,7 @@ body section#access .container .iframe-container iframe {
 
 footer {
   background-color: #fff;
+  padding-bottom: 10px;
 }
 footer .container {
   width: 80%;
@@ -534,10 +535,6 @@ footer .container {
   footer .container {
     width: 90%;
   }
-}
-
-img {
-  width: 300px;
 }
 
 html {
