@@ -422,10 +422,11 @@ body section#menu .container .menu-btn-area .menu-btn.invalid {
   color: #000;
 }
 body section#menu .container .menu-list {
-  overflow-x: scroll;
+  overflow: hidden;
 }
 @media screen and (max-width: 992px) {
   body section#menu .container .menu-list {
+    overflow-x: scroll;
     padding-left: 0px;
   }
 }

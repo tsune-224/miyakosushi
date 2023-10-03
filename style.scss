@@ -420,8 +420,9 @@ body {
           }
         }
         .menu-list {
-          overflow-x: scroll;
+          overflow: hidden;
           @include mq("md") {
+            overflow-x: scroll;
             padding-left: 0px;
           }
           &.active {
