@@ -445,11 +445,20 @@ body section#menu .container .menu-list li {
   font-size: 24px;
   font-weight: 800;
   white-space: nowrap;
+  min-width: 440px;
+}
+body section#menu .container .menu-list li.has-subList {
+  margin-bottom: 6px;
 }
 body section#menu .container .menu-list li .dotted {
   border-bottom: 2px dotted gray;
   width: 100%;
   margin: auto 12px;
+}
+body section#menu .container .menu-list .sub-list {
+  font-size: 18px;
+  font-weight: 500;
+  color: #6b6b6b;
 }
 body section#reserve .container .reserve-content {
   display: flex;
